@@ -21,7 +21,5 @@ public class SlidePiecePoint : MonoBehaviour
                 slidePieceComponent.Connected = true;
             }
         }
-
-        EventSystem<GameObject>.InvokeEvent(EventType.onPickupItem, null);
     }
 }
