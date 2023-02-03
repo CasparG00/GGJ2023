@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class ISOPlayerMovement : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public CharacterController charControl;
+    public float speed;
+    public void FixedUpdate()
     {
         
-    }
+        var h = (Vector3.right - Vector3.forward).normalized * Input.GetAxisRaw("Horizontal");
+        var v = (Vector3.right - Vector3.back).normalized * Input.GetAxisRaw("Vertical");
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        var wishDir = (h + v).normalized;
+
+            charControl.Move(wishDir * speed);
     }
 }
+
