@@ -11,9 +11,9 @@ public class RotatePuzzle : MonoBehaviour
     {
         if (isMouseDown)
         {
-        var dir = Input.mousePosition - Camera.main.WorldToScreenPoint(transform.position);
-        angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+            var dir = Input.mousePosition - Camera.main.WorldToScreenPoint(transform.position);
+            angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         }
     }
 
