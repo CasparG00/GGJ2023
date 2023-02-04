@@ -1,20 +1,21 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(CharacterController))]
 public class ISOPlayerMovement : MonoBehaviour
 {
-    public CharacterController charControl;
+    private CharacterController characterController;
+    private CharacterController CharacterController => characterController = characterController != null ? characterController : GetComponent<CharacterController>();
+
     public float speed;
-    public void FixedUpdate()
+
+    public void Update()
     {
-        
         var h = (Vector3.right - Vector3.forward).normalized * Input.GetAxisRaw("Horizontal");
         var v = (Vector3.right - Vector3.back).normalized * Input.GetAxisRaw("Vertical");
 
         var wishDir = (h + v).normalized;
 
-            charControl.Move(wishDir * speed);
+        CharacterController.Move(wishDir * (speed * Time.deltaTime));
     }
 }
 
