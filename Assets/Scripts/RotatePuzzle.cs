@@ -11,6 +11,12 @@ public class RotatePuzzle : MonoBehaviour
     public float prevAngle;
 
     public int rotadraaing;
+    public bool aCheck;
+    public int i = 1;
+
+    public List<Transform> positions;
+    public List<GameObject> items;
+    public List<GameObject> knopjes;
 
     // Update is called once per frame
     void FixedUpdate()
@@ -39,6 +45,32 @@ public class RotatePuzzle : MonoBehaviour
 
         if (rotadraaing < 0) rotadraaing = 0;
 
+        if (aCheck)
+        {
+            if(rotadraaing > 2)
+            {
+                if (i >= 4) {
+                    i = 4; 
+                    gameObject.SetActive(false); 
+                }
+                if(items != null) Destroy(items[i].gameObject);
+                if (knopjes != null) knopjes[i].SetActive(true);
+                i++;
+                items[i].SetActive(true);
+
+                rotadraaing = 0;
+                if(positions != null) this.transform.position = positions[i].position;
+            }
+        }
+
         prevAngle = checkAngle;
+    }
+
+    private void Awake()
+    {
+        if (aCheck)
+        {
+            this.transform.position = positions[0].position;
+        }
     }
 }

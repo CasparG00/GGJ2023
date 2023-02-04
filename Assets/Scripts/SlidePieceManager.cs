@@ -25,9 +25,10 @@ public class SlidePieceManager : MonoBehaviour
     private void Update()
     {
         if (slidePieces == null) return;
-        if (slidePieces.Any(x => !x.Connected)) return;
+        if (slidePieces.All(x => !x.Connected)) return;
 
         UI.gameObject.SetActive(true);
         Debug.Log("Puzzle Solved!");
     }
 }
+ 
