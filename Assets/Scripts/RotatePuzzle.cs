@@ -25,7 +25,7 @@ public class RotatePuzzle : MonoBehaviour
 
         if (prevAngle - checkAngle > 10)
         {
-            if (checkAngle > 180)
+            if (checkAngle > 30)
             {
                 rotadraaing--;
             }
