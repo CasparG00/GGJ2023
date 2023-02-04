@@ -3,17 +3,18 @@ using UnityEngine;
 public class SimplePickup : MonoBehaviour
 {
     public ItemType itemType;
-    public bool hasEntered;
+    private bool hasEntered;
 
     private void OnTriggerEnter(Collider other)
     {
         hasEntered = true;
-        EventSystem<Transform>.InvokeEvent(EventType.onUIEnter, transform);
+        EventSystem<WorldMessage>.InvokeEvent(EventType.onUIEnter, new WorldMessage(transform, "PRESS E"));
     }
 
     private void OnTriggerExit(Collider other)
     {
         hasEntered = false;
+        EventSystem.InvokeEvent(EventType.onUIExit);
     }
 
     private void Update()
@@ -22,7 +23,6 @@ public class SimplePickup : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E))
         {
             Inventory.AddItem(itemType, 1);
-            EventSystem.InvokeEvent(EventType.onUIExit);
             Destroy(gameObject);
         }
     }

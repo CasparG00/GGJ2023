@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 public static class Inventory
 {
-    private static Dictionary<ItemType, int> inventory;
+    private static readonly Dictionary<ItemType, int> inventory = new();
 
     public static int GetItem(ItemType type, int amount)
     {
@@ -13,11 +13,25 @@ public static class Inventory
             inventory[type] -= amount;
             return amount;
         }
-        else return 0;
+        return 0;
+    }
+
+    public static int CheckItem(ItemType type)
+    {
+        if (!inventory.ContainsKey(type))
+        {
+            inventory.Add(type, 0);
+            return 0;
+        }
+        return inventory[type];
     }
 
     public static void AddItem(ItemType type, int amount)
     {
+        if (!inventory.ContainsKey(type))
+        {
+            inventory.Add(type, 0);
+        }
         inventory[type] += amount;
     }
 
@@ -29,7 +43,7 @@ public static class Inventory
 
 public enum ItemType
 {
-    wood,
-    metal,
-    screw
+    Wood,
+    Metal,
+    Screw
 }

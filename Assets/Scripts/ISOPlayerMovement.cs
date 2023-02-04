@@ -4,8 +4,8 @@ using UnityEngine.Events;
 [RequireComponent(typeof(Rigidbody))]
 public class ISOPlayerMovement : MonoBehaviour
 {
-    private Rigidbody rigidbody;
-    private Rigidbody Rigidbody => rigidbody = rigidbody != null ? rigidbody : GetComponent<Rigidbody>();
+    private Rigidbody rb;
+    private Rigidbody Rigidbody => rb = rb != null ? rb : GetComponent<Rigidbody>();
 
     private Vector3 wishDir;
     public float speed;

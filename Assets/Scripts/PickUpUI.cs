@@ -1,32 +1,45 @@
+using System;
+using TMPro;
 using UnityEngine;
 
 public class PickUpUI : MonoBehaviour
 {
-    public GameObject UIobject;
+    public TextMeshProUGUI UIobject;
     public Vector3 offset;
     private void OnEnable()
     {
-        EventSystem<Transform>.AddListener(EventType.onUIEnter, OnEnter);
+        EventSystem<WorldMessage>.AddListener(EventType.onUIEnter, OnEnter);
         EventSystem.AddListener(EventType.onUIExit, OnExit);
     }
 
     private void OnDisable()
     {
-        EventSystem<Transform>.RemoveListener(EventType.onUIEnter, OnEnter);
+        EventSystem<WorldMessage>.RemoveListener(EventType.onUIEnter, OnEnter);
         EventSystem.RemoveListener(EventType.onUIExit, OnExit);
     }
 
-    private void OnEnter(Transform _transform)
+    private void OnEnter(WorldMessage message)
     {
-        UIobject.transform.position = _transform.position + offset;
-        UIobject.SetActive(true);
+        UIobject.transform.position = message.target.position + offset;
+        UIobject.text = message.message;
+        UIobject.gameObject.SetActive(true);
     }
 
     private void OnExit()
     {
-        UIobject.SetActive(false);
+        UIobject.gameObject.SetActive(false);
     }
+}
 
+[Serializable]
+public class WorldMessage
+{
+    public Transform target;
+    public string message;
 
-
+    public WorldMessage(Transform target, string message)
+    {
+        this.target = target;
+        this.message = message;
+    }
 }
