@@ -66,4 +66,7 @@ public static class EventSystem<T>
 public enum EventType
 {
     onPickupItem,
+    onUIEnter,
+    onUIExit
+
 }

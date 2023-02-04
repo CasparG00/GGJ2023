@@ -6,6 +6,8 @@ public class PickUp : MonoBehaviour
     public GameObject itemPrefab;
     [SerializeField] private Sprite displaySprite;
 
+    public bool hasEntered;
+
     private SpriteRenderer spriteRenderer;
     private SpriteRenderer SpriteRenderer => spriteRenderer = spriteRenderer == null ? GetComponent<SpriteRenderer>() : spriteRenderer;
 
@@ -14,13 +16,25 @@ public class PickUp : MonoBehaviour
         SpriteRenderer.sprite = displaySprite;
     }
 
-    private void OnTriggerStay(Collider other)
+    private void Update()
     {
+        if (!hasEntered) return;
         if (Input.GetKeyDown(KeyCode.E))
         {
             EventSystem<GameObject>.InvokeEvent(EventType.onPickupItem, itemPrefab);
+            EventSystem.InvokeEvent(EventType.onUIExit);
+            Destroy(gameObject);
         }
+    }
 
-        Destroy(gameObject);
+    private void OnTriggerEnter(Collider other)
+    {
+        hasEntered = true;
+        EventSystem<Transform>.InvokeEvent(EventType.onUIEnter, transform);
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        hasEntered = false;
     }
 }
