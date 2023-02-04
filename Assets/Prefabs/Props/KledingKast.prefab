@@ -13,6 +13,18 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 44fe2440b124604439d72e7859ce3c9a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 44fe2440b124604439d72e7859ce3c9a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 44fe2440b124604439d72e7859ce3c9a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 44fe2440b124604439d72e7859ce3c9a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.572
       objectReference: {fileID: 0}
@@ -54,7 +66,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 44fe2440b124604439d72e7859ce3c9a, type: 3}
       propertyPath: m_Name
-      value: KledingKast Variant
+      value: KledingKast
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
