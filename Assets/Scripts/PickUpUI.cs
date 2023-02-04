@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class PickUpUI : MonoBehaviour
 {
-    public Transform trans;
     public GameObject UIobject;
     public Vector3 offset;
     private void OnEnable()
@@ -19,7 +18,7 @@ public class PickUpUI : MonoBehaviour
 
     private void OnEnter(Transform _transform)
     {
-        trans.position = _transform.position + offset;
+        UIobject.transform.position = _transform.position + offset;
         UIobject.SetActive(true);
     }
 

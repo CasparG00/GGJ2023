@@ -36,5 +36,6 @@ public class PickUp : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         hasEntered = false;
+        EventSystem.InvokeEvent(EventType.onUIExit);
     }
 }
