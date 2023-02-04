@@ -67,6 +67,8 @@ public enum EventType
 {
     onPickupItem,
     onUIEnter,
-    onUIExit
+    onUIExit,
+    onPieceCollision,
+    onInbusDone
 
 }
