@@ -8,7 +8,6 @@ public class PlayerAnimatorController : MonoBehaviour
 
     public void OnPlayerMove(float speed)
     {
-        Debug.Log(speed);
         Animator.SetFloat("speed", speed);
     }
 }
