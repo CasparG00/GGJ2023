@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(CharacterController))]
 public class ISOPlayerMovement : MonoBehaviour
@@ -8,6 +9,8 @@ public class ISOPlayerMovement : MonoBehaviour
 
     public float speed;
 
+    public UnityEvent<float> onMove;
+
     public void Update()
     {
         var h = (Vector3.right - Vector3.forward).normalized * Input.GetAxisRaw("Horizontal");
@@ -16,6 +19,8 @@ public class ISOPlayerMovement : MonoBehaviour
         var wishDir = (h + v).normalized;
 
         CharacterController.Move(wishDir * (speed * Time.deltaTime));
+
+        onMove.Invoke(wishDir.sqrMagnitude);
     }
 }
 

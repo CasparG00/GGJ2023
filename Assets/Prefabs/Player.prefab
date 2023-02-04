@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8066135543237594699}
   - component: {fileID: 3238077024504892349}
+  - component: {fileID: 6059683942228903482}
+  - component: {fileID: 7525713052361943428}
   m_Layer: 0
   m_Name: character
   m_TagString: Untagged
@@ -84,6 +86,38 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &6059683942228903482
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8273466862035541898}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: aa1713fc659a4184d83bac99a0b0ace0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &7525713052361943428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8273466862035541898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 602abb3dbd89adc40a3d160e6188e349, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9057677923525679866
 GameObject:
   m_ObjectHideFlags: 0
@@ -155,6 +189,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
+  onMove:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7525713052361943428}
+        m_TargetAssemblyTypeName: PlayerAnimatorController, Assembly-CSharp
+        m_MethodName: OnPlayerMove
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!143 &9057677923525679859
 CharacterController:
   m_ObjectHideFlags: 0
