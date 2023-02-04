@@ -13,12 +13,17 @@ public class SlidePiecePoint : MonoBehaviour
     {
         if (!Connected)
         {
-            var overlap = Physics2D.OverlapCircle(transform.position, detectionRadius, detectionLayerMask);
-            var slidePieceComponent = overlap.transform.GetComponent<SlidePiecePoint>();
-            if (slidePieceComponent != null)
+            var overlaps = Physics2D.OverlapCircleAll(transform.position, detectionRadius, detectionLayerMask);
+            
+            foreach (var overlap in overlaps)
             {
-                Connected = true;
-                slidePieceComponent.Connected = true;
+                if (overlap.gameObject == gameObject) continue;
+                var slidePieceComponent = overlap.transform.GetComponent<SlidePiecePoint>();
+                if (slidePieceComponent != null)
+                {
+                    Connected = true;
+                    slidePieceComponent.Connected = true;
+                }
             }
         }
     }
