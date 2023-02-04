@@ -49,13 +49,14 @@ public class RotatePuzzle : MonoBehaviour
         {
             if(rotadraaing > 2)
             {
-                if (i >= 4) {
-                    i = 4; 
-                    gameObject.SetActive(false); 
-                }
                 if(items != null) Destroy(items[i].gameObject);
                 if (knopjes != null) knopjes[i].SetActive(true);
                 i++;
+                if (i >= 3)
+                {
+                    i = 3;
+                    this.gameObject.SetActive(false);
+                }
                 items[i].SetActive(true);
 
                 rotadraaing = 0;
