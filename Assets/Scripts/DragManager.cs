@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class DragManager : MonoBehaviour
 {
+    [SerializeField] private Camera cam;
+
     private Transform dragTransform;
     private Vector3 offset;
 
@@ -9,12 +11,15 @@ public class DragManager : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            var hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
+            var hit = Physics2D.Raycast(cam.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
             if (hit)
             {
-                dragTransform = hit.transform;
+                if (hit.transform.GetComponent<SlidePiece>() != null)
+                {
+                    dragTransform = hit.transform;
 
-                offset = dragTransform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                    offset = dragTransform.position - cam.ScreenToWorldPoint(Input.mousePosition);
+                }
             }
         }
         else if (Input.GetMouseButtonUp(0))
@@ -24,7 +29,7 @@ public class DragManager : MonoBehaviour
 
         if (dragTransform != null)
         {
-            dragTransform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition) + offset;
+            dragTransform.position = cam.ScreenToWorldPoint(Input.mousePosition) + offset;
         }
     }
 }

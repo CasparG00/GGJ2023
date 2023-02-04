@@ -1,18 +1,26 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(SpriteRenderer))]
 public class PickUp : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameObject itemPrefab;
+    [SerializeField] private Sprite displaySprite;
+
+    private SpriteRenderer spriteRenderer;
+    private SpriteRenderer SpriteRenderer => spriteRenderer = spriteRenderer == null ? GetComponent<SpriteRenderer>() : spriteRenderer;
+
+    private void Awake()
     {
-        
+        SpriteRenderer.sprite = displaySprite;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerStay(Collider other)
     {
-        
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            EventSystem<GameObject>.InvokeEvent(EventType.onPickupItem, itemPrefab);
+        }
+
+        Destroy(gameObject);
     }
 }
