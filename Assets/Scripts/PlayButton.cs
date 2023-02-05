@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayButton : MonoBehaviour
 {
-    public void Awake()
+    public void Start()
     {
         Debug.Log("E");
     }
