@@ -12,7 +12,11 @@ public class RotatePuzzle : MonoBehaviour
 
     public int rotadraaing;
     public bool aCheck;
-    public int i = 1;
+    public int i;
+    public int amount;
+
+    public GameObject finishObj;
+    public GameObject krank;
 
     public List<Transform> positions;
     public List<GameObject> items;
@@ -49,14 +53,21 @@ public class RotatePuzzle : MonoBehaviour
         {
             if(rotadraaing > 2)
             {
-                if(items != null) Destroy(items[i].gameObject);
-                if (knopjes != null) knopjes[i].SetActive(true);
-                i++;
-                if (i >= 3)
+                if (i > amount)
                 {
-                    i = 3;
-                    this.gameObject.SetActive(false);
+                    krank.gameObject.SetActive(false);
+                    finishObj.gameObject.SetActive(true);
                 }
+                if (i >= amount) return;
+                Destroy(items[i].gameObject);
+                knopjes[i].SetActive(true);
+                i++;
+                if (i > amount)
+                {
+                    krank.gameObject.SetActive(false);
+                    finishObj.gameObject.SetActive(true);
+                }
+                if (i >= amount) return;
                 items[i].SetActive(true);
 
                 rotadraaing = 0;
