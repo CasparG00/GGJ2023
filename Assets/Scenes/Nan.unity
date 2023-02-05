@@ -2615,7 +2615,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 140, y: 140}
+  m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1489846604
 MonoBehaviour:
@@ -2680,7 +2680,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2707,7 +2707,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: 80b4967bc26724c4084a2e8f0e2fe00c, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -3204,6 +3204,9 @@ GameObject:
   - component: {fileID: 2057585462}
   - component: {fileID: 2057585461}
   - component: {fileID: 2057585464}
+  - component: {fileID: 2057585467}
+  - component: {fileID: 2057585466}
+  - component: {fileID: 2057585465}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3306,3 +3309,42 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &2057585465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2057585460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 990edc9f36a42c844a59f66913982e24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imageEffect: {fileID: 2100000, guid: 35c3a9a4bd4738545a85a4d50eb51096, type: 2}
+--- !u!114 &2057585466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2057585460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 990edc9f36a42c844a59f66913982e24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imageEffect: {fileID: 2100000, guid: 46300adbde46b054b8fc71133ccf0f33, type: 2}
+--- !u!114 &2057585467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2057585460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 990edc9f36a42c844a59f66913982e24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imageEffect: {fileID: 2100000, guid: 7e38daf45beca0b42ba0d5901a94d201, type: 2}
