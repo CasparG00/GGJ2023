@@ -53,7 +53,7 @@ public class RotatePuzzle : MonoBehaviour
         {
             if(rotadraaing > 2)
             {
-                if (i > amount)
+                if (i >= amount)
                 {
                     krank.gameObject.SetActive(false);
                     finishObj.gameObject.SetActive(true);
@@ -62,14 +62,18 @@ public class RotatePuzzle : MonoBehaviour
                 Destroy(items[i].gameObject);
                 knopjes[i].SetActive(true);
                 i++;
-                if (i > amount)
+                if (i >= amount)
                 {
                     krank.gameObject.SetActive(false);
                     finishObj.gameObject.SetActive(true);
                 }
                 if (i >= amount) return;
                 items[i].SetActive(true);
-
+                if (i >= amount)
+                {
+                    krank.gameObject.SetActive(false);
+                    finishObj.gameObject.SetActive(true);
+                }
                 rotadraaing = 0;
                 if(positions != null) this.transform.position = positions[i].position;
             }
