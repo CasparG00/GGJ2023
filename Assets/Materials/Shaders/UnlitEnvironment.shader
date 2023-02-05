@@ -24,12 +24,14 @@ Shader "Unlit/UnlitEnvironment"
             {
                 float4 vertex : POSITION;
                 float2 uv : TEXCOORD0;
+                float3 normal : NORMAL;
             };
 
             struct v2f
             {
                 float2 uv : TEXCOORD0;
                 float4 vertex : SV_POSITION;
+                float3 worldNormal : NORMAL;
             };
 
             sampler2D _MainTex;
@@ -41,12 +43,16 @@ Shader "Unlit/UnlitEnvironment"
                 v2f o;
                 o.vertex = UnityObjectToClipPos(v.vertex);
                 o.uv = TRANSFORM_TEX(v.uv, _MainTex);
+                o.worldNormal = UnityObjectToWorldNormal(v.normal);
                 return o;
             }
 
             fixed4 frag (v2f i, fixed facing : VFACE) : SV_Target
             {
-                fixed4 frontCol = tex2D(_MainTex, i.uv);
+                float3 normal = normalize(i.worldNormal);
+                float lightDir = saturate(dot(float3(-1, 0, 0), normal)) * 0.5 + 0.5;
+
+                fixed4 frontCol = tex2D(_MainTex, i.uv) * lightDir;
                 fixed4 col = facing > 0 ? frontCol : _BackfaceColor;
                 return col;
             }

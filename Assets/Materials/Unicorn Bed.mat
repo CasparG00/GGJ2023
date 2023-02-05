@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Unicorn Bed
-  m_Shader: {fileID: 4800000, guid: 91f65f5b73cfb0644b7d1027c8881889, type: 3}
+  m_Shader: {fileID: 4800000, guid: a27d8bf9fdc07524289eca39a1b8ae46, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
