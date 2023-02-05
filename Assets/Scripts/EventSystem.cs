@@ -69,5 +69,6 @@ public enum EventType
     onUIEnter,
     onUIExit,
     onPieceCollision,
-    onInbusDone
+    onInbusDone,
+    barricadeDestroyed
 }

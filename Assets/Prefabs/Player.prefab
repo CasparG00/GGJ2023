@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2703913113735835330}
   - component: {fileID: 4491717475253486582}
+  - component: {fileID: 6924398590704556892}
   m_Layer: 0
   m_Name: Pickup Sound Source
   m_TagString: Untagged
@@ -43,7 +44,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -128,6 +129,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &6924398590704556892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3534775449098209215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a7e1aa2e647ced4685f50d1c7704693, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  source: {fileID: 4491717475253486582}
+  sounds:
+  - type: 0
+    clip: {fileID: 8300000, guid: b20f7dda08500284585181243d9b6ce8, type: 3}
+  - type: 1
+    clip: {fileID: 8300000, guid: 693168a996737e842a93ae2ca2da07fb, type: 3}
+  - type: 2
+    clip: {fileID: 8300000, guid: cd60fc966eeefb24b947f1c0106c5192, type: 3}
+  barricadeDestroyedSound: {fileID: 8300000, guid: 3a04c4b66b65230488ceda07c5a823d9, type: 3}
 --- !u!1 &8273466862035541898
 GameObject:
   m_ObjectHideFlags: 0

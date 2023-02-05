@@ -44,6 +44,8 @@ public class Barricade : MonoBehaviour
             }
 
             EventSystem.InvokeEvent(EventType.onUIExit);
+            EventSystem.InvokeEvent(EventType.barricadeDestroyed);
+
             Destroy(gameObject);
         }
     }
