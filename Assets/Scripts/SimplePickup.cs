@@ -24,6 +24,7 @@ public class SimplePickup : MonoBehaviour
         {
             Inventory.AddItem(itemType, 1);
             Destroy(gameObject);
+            EventSystem.InvokeEvent(EventType.onUIExit);
         }
     }
 }

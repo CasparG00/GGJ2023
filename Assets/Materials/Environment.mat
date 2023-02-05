@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Environment
-  m_Shader: {fileID: 4800000, guid: 3cddaa449f34379438fc929208b64402, type: 3}
+  m_Shader: {fileID: 4800000, guid: 6f6803fd53512324f83fde78d0dd69c4, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -32,5 +32,6 @@ Material:
     - _Glossiness: 0
     - _Metallic: 0
     m_Colors:
+    - _BackfaceColor: {r: 0, g: 0, b: 0, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
