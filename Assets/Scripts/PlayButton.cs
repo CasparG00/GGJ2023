@@ -1,12 +1,30 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PlayButton : MonoBehaviour
 {
-    public void PlayGame(int scene)
+    [SerializeField] private int sceneIndex = 1;
+
+    private void Start()
     {
-        SceneManager.LoadScene(scene);
+        Cursor.visible = true;
+    }
+    public void PlayGame()
+    {
+        LoadLevel();
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.E) | Input.GetKeyDown(KeyCode.Return))
+        {
+            LoadLevel();
+        }
+    }
+
+    private void LoadLevel()
+    {
+        Cursor.visible = false;
+        SceneManager.LoadScene(sceneIndex);
     }
 }
