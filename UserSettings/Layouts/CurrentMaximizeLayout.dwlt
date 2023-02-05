@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 11732
+  controlID: 17725
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -146,7 +146,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 11733
+  controlID: 17675
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -171,7 +171,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 11734
+  controlID: 17659
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -191,8 +191,8 @@ MonoBehaviour:
     y: 0
     width: 335.5
     height: 535.5
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 6}
   m_Panes:
   - {fileID: 6}
@@ -233,7 +233,7 @@ MonoBehaviour:
     m_SaveData: []
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 0}
+      scrollPos: {x: 0, y: 194.5}
       m_SelectedIDs: 
       m_LastClickedID: 0
       m_ExpandedIDs: bafaffff2e4d0000
@@ -431,7 +431,7 @@ MonoBehaviour:
       floating: 1
       collapsed: 0
       displayed: 0
-      snapOffset: {x: -286, y: -207.5}
+      snapOffset: {x: -255, y: -154.5}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 3
       id: Scene View/Camera
@@ -599,7 +599,7 @@ MonoBehaviour:
       containerId: overlay-container--right
       floating: 0
       collapsed: 0
-      displayed: 0
+      displayed: 1
       snapOffset: {x: 48, y: 48}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
@@ -657,9 +657,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -3.335, y: 0.409, z: -9.97}
+    m_Target: {x: -1.48, y: 1.005, z: -17.246}
     speed: 2
-    m_Value: {x: -3.335, y: 0.409, z: -9.97}
+    m_Value: {x: -1.48, y: 1.005, z: -17.246}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -705,13 +705,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.24520575, y: 0.4636266, z: -0.1352265, w: 0.84064716}
+    m_Target: {x: 0.4093826, y: 0.1932852, z: -0.089187995, w: 0.8872261}
     speed: 2
-    m_Value: {x: 0.2451997, y: 0.46361515, z: -0.13522317, w: 0.8406264}
+    m_Value: {x: 0.40936667, y: 0.19327766, z: -0.089184515, w: 0.88719153}
   m_Size:
-    m_Target: 0.8660254
+    m_Target: 1.0657477
     speed: 2
-    m_Value: 0.8660254
+    m_Value: 1.0657477
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -912,14 +912,14 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Sprites/Props enviorment/woonkamer
+    - Assets/Sprites/Main menu
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Sprites/Props enviorment/woonkamer
+  - Assets/Sprites/Main menu
   m_LastFoldersGridSize: -1
   m_LastProjectPath: /Users/nankallen/Documents/hku/Jaar 2.5/game jam/Unity/Game
     jam 2023 HKU/GGJ2023
@@ -927,9 +927,9 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 58.5}
-    m_SelectedIDs: 90570000
-    m_LastClickedID: 22416
-    m_ExpandedIDs: 00000000ae4f0000285000006c57000000ca9a3b
+    m_SelectedIDs: 68570000
+    m_LastClickedID: 22376
+    m_ExpandedIDs: 00000000ae4f00002850000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -982,9 +982,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 8edbfeff
-    m_LastClickedInstanceID: -74866
-    m_HadKeyboardFocusLastEvent: 1
+    m_SelectedInstanceIDs: 7ca0feff
+    m_LastClickedInstanceID: -89988
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1081,7 +1081,7 @@ MonoBehaviour:
     m_SaveData: []
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 19758
+  m_LastSelectedObjectID: -103628
 --- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1101,8 +1101,8 @@ MonoBehaviour:
     y: 0
     width: 350.5
     height: 890
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -1147,7 +1147,7 @@ MonoBehaviour:
     m_CachedPref: 160
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: -74866
+  m_LastInspectedObjectInstanceID: -89988
   m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
