@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.Events;
 
 [RequireComponent(typeof(Rigidbody))]
 public class ISOPlayerMovement : MonoBehaviour
@@ -9,8 +8,7 @@ public class ISOPlayerMovement : MonoBehaviour
 
     private Vector3 wishDir;
     public float speed;
-
-    public UnityEvent<float> onMove;
+    [SerializeField] private Animator animator;
 
     private void Update()
     {
@@ -23,8 +21,7 @@ public class ISOPlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         Rigidbody.velocity = wishDir * (speed);
-
-        onMove.Invoke(wishDir.sqrMagnitude);
+        animator.SetFloat("speed", wishDir.sqrMagnitude);
     }
 }
 
