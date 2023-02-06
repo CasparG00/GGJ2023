@@ -8,7 +8,7 @@ public class SimplePickup : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         hasEntered = true;
-        EventSystem<WorldMessage>.InvokeEvent(EventType.onUIEnter, new WorldMessage(transform, "PRESS E"));
+        EventSystem<WorldMessage>.InvokeEvent(EventType.onUIEnter, new WorldMessage(transform, "PRESS E TO BUY"));
     }
 
     private void OnTriggerExit(Collider other)

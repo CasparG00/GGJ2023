@@ -34,7 +34,7 @@ public class Barricade : MonoBehaviour
         {
             if (requiredMaterials.Any(mat => Inventory.CheckItem(mat.type) < mat.amount))
             {
-                EventSystem<WorldMessage>.InvokeEvent(EventType.onUIEnter, new WorldMessage(transform, "NOT ENOUGH MATERIALS"));
+                EventSystem<WorldMessage>.InvokeEvent(EventType.onUIEnter, new WorldMessage(transform, "NOT ENOUGH STUFF"));
                 return;
             }
 
